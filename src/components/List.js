@@ -1,16 +1,23 @@
 import { connect } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { fetchBooks } from "../redux/actions";
 import BookList from "./BookList";
 import Books from "./Books";
 
 const List = ({ lists, loading, error, fetchBooks }) => {
+  const effectRan = useRef(false);
   const getTopFiveBooks = async () => {
     await fetchBooks();
   };
 
   useEffect(() => {
-    getTopFiveBooks();
+    if (effectRan.current === false) {
+      getTopFiveBooks();
+      return () => {
+        console.log("unmounted");
+        effectRan.current = true;
+      };
+    }
   }, []);
 
   if (loading) {
