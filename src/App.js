@@ -4,27 +4,22 @@ import BookList from "./components/BookList";
 import Header from "./components/header";
 import Navbar from "./components/navbar";
 import { _getTopFiveBooks } from "./api/nyt_api";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import rootReducer from "./redux";
 import List from "./components/List";
 
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
 function App() {
-  const [result, setResult] = React.useState([]);
-
-  const getTopFiveBooks = async () => {
-    const result = await _getTopFiveBooks();
-    console.log("In The appjs", result);
-    setResult(result);
-  };
-
-  React.useEffect(() => {
-    getTopFiveBooks();
-  }, []);
-
   return (
-    <div className="container mt-5">
-      <Header />
-      <Navbar />
-      <List />
-      {result && result.map((list) => <BookList list={list} />)}
+    <div className="container">
+      <Provider store={store}>
+        <Header />
+        <Navbar />
+        <List />
+      </Provider>
     </div>
   );
 }

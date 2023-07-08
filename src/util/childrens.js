@@ -1,0 +1,42 @@
+export const childrens = [
+  {
+    list_name: "Childrens Middle Grade",
+    display_name: "Children’s Middle Grade",
+    list_name_encoded: "childrens-middle-grade",
+    oldest_published_date: "2012-12-16",
+    newest_published_date: "2015-08-23",
+    updated: "WEEKLY",
+  },
+  {
+    list_name: "Childrens Middle Grade Hardcover",
+    display_name: "Children’s Middle Grade Hardcover",
+    list_name_encoded: "childrens-middle-grade-hardcover",
+    oldest_published_date: "2015-08-30",
+    newest_published_date: "2023-07-16",
+    updated: "WEEKLY",
+  },
+  {
+    list_name: "Picture Books",
+    display_name: "Children’s Picture Books",
+    list_name_encoded: "picture-books",
+    oldest_published_date: "2008-06-08",
+    newest_published_date: "2023-07-16",
+    updated: "WEEKLY",
+  },
+  {
+    list_name: "Series Books",
+    display_name: "Children’s Series",
+    list_name_encoded: "series-books",
+    oldest_published_date: "2008-06-08",
+    newest_published_date: "2023-07-16",
+    updated: "WEEKLY",
+  },
+  {
+    list_name: "Young Adult Hardcover",
+    display_name: "Young Adult Hardcover",
+    list_name_encoded: "young-adult-hardcover",
+    oldest_published_date: "2015-08-30",
+    newest_published_date: "2023-07-16",
+    updated: "WEEKLY",
+  },
+];

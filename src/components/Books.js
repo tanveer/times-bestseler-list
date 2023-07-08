@@ -1,13 +1,14 @@
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import { fetchBooks } from "../redux/actions";
 import Book from "./Book";
 
-const Books = ({ res }) => {
-  return (
-    <div>
-      {res.books.map((book) => (
-        <Book book={book} />
-      ))}
-    </div>
-  );
+const Books = ({ list }) => {
+  return <div></div>;
 };
 
-export default Books;
+const mapStateToProps = ({ books }) => {
+  return { books };
+};
+
+export default connect(mapStateToProps)(Books);
