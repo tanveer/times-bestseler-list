@@ -25,7 +25,6 @@ export const fetchBooks = () => {
     ) {
       console.log("From Cached");
       dispatch(fetchBooksSuccess(JSON.parse(cachedLists))); // Use cached data if it's not expired
-      localStorage.clear();
     } else {
       console.log("From API fetch");
       axios

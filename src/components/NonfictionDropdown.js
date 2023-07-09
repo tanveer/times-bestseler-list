@@ -1,4 +1,5 @@
 import { nonfiction } from "../util/nonfiction";
+import { Link } from "react-router-dom";
 
 const Nonfiction = () => {
   return (
@@ -15,9 +16,9 @@ const Nonfiction = () => {
       <ul className="dropdown-menu">
         {nonfiction.map((f) => (
           <li key={f.list_name}>
-            <a className="dropdown-item" href="#">
+            <Link className="dropdown-item" to={`/${f.list_name_encoded}`}>
               {f.display_name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

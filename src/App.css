@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+
+.bookTitle {
+  font-size: 1.0625rem;
+  color: #000;
+  font-weight: 700;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  line-height: 1.1875rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.timeOnList {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  line-height: 1.1875rem;
+  color: #333;
+  display: block;
+  text-transform: uppercase;
+  margin: 0rem;
+  -webkit-letter-spacing: 0.025em;
+  -moz-letter-spacing: 0.025em;
+  -ms-letter-spacing: 0.025em;
+  letter-spacing: 0.025em;
+}
+
+.author_publisher {
+  color: #000;
+  font-weight: 500;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-size: 0.8375rem;
+  line-height: 1.1875rem;
+  display: inline;
+  -webkit-font-smoothing: antialiased;
+}
+
+.description {
+  color: #333;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  font-weight: 500;
+  font-family: nyt-imperial, georgia, "times new roman", times, serif;
+  margin-bottom: 0.4375rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
