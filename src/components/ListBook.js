@@ -30,10 +30,9 @@ const ListBook = ({ book }) => {
         </div>
         <div className="col col-md-2">
           <img
-            src={
-              `https://storage.googleapis.com/du-prd/books/images/${isbns[0].isbn13}.jpg` ||
-              `https://storage.googleapis.com/du-prd/books/images/${isbns[0].isbn10}.jpg`
-            }
+            src={`https://storage.googleapis.com/du-prd/books/images/${
+              isbns.length > 0 ? isbns[0].isbn13 : bookDetail.primary_isbn13
+            }.jpg`}
             className="img-fluid rounded-end w-75 p-2"
             alt="book cover"
           />

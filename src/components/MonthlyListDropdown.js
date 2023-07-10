@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { monthlyList } from "../util/monthlyList";
 
 const MonthlyList = () => {
@@ -15,9 +16,9 @@ const MonthlyList = () => {
       <ul className="dropdown-menu">
         {monthlyList.map((f) => (
           <li key={f.list_name}>
-            <a className="dropdown-item" href="#">
+            <Link className="dropdown-item" to={`/${f.list_name_encoded}`}>
               {f.display_name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

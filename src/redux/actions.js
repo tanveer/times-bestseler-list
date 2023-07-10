@@ -23,13 +23,11 @@ export const fetchBooks = () => {
       cachedTimestamp &&
       currentTimestamp - cachedTimestamp < _24Hours
     ) {
-      console.log("From Cached");
       dispatch(fetchBooksSuccess(JSON.parse(cachedLists))); // Use cached data if it's not expired
     } else {
-      console.log("From API fetch");
       axios
         .get(
-          "https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=G9BGUB74PeBhtTukOacWXpYPUwEhAMVd"
+          `https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=${process.env.REACT_APP_API_KEY}`
         )
         .then((response) => {
           const lists = response.data.results.lists;
